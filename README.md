@@ -1,78 +1,100 @@
-# React + TypeScript + Vite
+# Jotai Workshop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
+````js
 export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  # Jotai Workshop
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+  This repository contains small React examples that illustrate different ways to work with shared state using [Jotai](https://jotai.org/). The exercises are designed to be read, changed, and compared in the browser rather than used as a standalone application.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  The examples assume that you already have a working knowledge of:
 
+  - React components and JSX
+  - Props and component composition
+  - React hooks, especially `useState`, `useContext`, and `useEffect`
+  - Local component state versus shared or global state
+  - Basic TypeScript
+
+  The workshop focuses on the Jotai examples themselves. It does not teach React or hooks from the beginning.
+
+  ## Requirements
+
+  Install the following before starting:
+
+  - [Node.js](https://nodejs.org/) 20.19 or newer, or 22.12 or newer
+  - [pnpm](https://pnpm.io/installation)
+
+  Check that they are available in your terminal:
+
+  ```bash
+  node --version
+  pnpm --version
+````
+
+## Getting Started
+
+Clone the repository, move into the project directory, and install its dependencies:
+
+```bash
+git clone <repository-url>
+cd jotai-workshop
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Start the development server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+pnpm dev
 ```
+
+Open the local URL printed by Vite, usually [http://localhost:5173](http://localhost:5173).
+
+## Working With The Workshop
+
+The home page lists the available tasks in a table. Each task has a link to the exercise and a link to its completed solution.
+
+1. Open a task page from the home page.
+2. Read the task README in the matching directory, such as [`src/tasks/task_1/readme.md`](src/tasks/task_1/readme.md).
+3. Implement the exercise in the task file, such as [`src/tasks/task_1/TaskOneA.tsx`](src/tasks/task_1/TaskOneA.tsx).
+4. Return to the browser and open the task page to see how your code behaves.
+5. Compare your implementation with the corresponding file in the `solutions` directory if you need help or want to review another approach.
+
+Task files are the student starting points. Solution files contain completed examples and are available through the solution links in the app.
+
+For example, Task 1 uses these routes:
+
+| Exercise                   | Solution                                              |
+| -------------------------- | ----------------------------------------------------- |
+| `/one`, `/one/b`, `/one/c` | `/solution/one`, `/solution/one/b`, `/solution/one/c` |
+
+Task 2 follows the same pattern with `/two` and `/solution/two`.
+
+## Project Structure
+
+```text
+src/
+  components/              Shared UI components
+  tasks/
+    task_1/
+      readme.md             Task instructions
+      TaskOneA.tsx          Student exercise
+      solutions/            Completed solutions
+    task_2/
+      readme.md
+      TaskTwoA.tsx
+      solutions/
+  Home.tsx                  Task and solution links
+  routes.tsx                Application routes
+```
+
+The task pages and solution pages are registered in [`src/routes.tsx`](src/routes.tsx). Their URL constants are defined in [`src/paths.ts`](src/paths.ts), and the home page links to them from [`src/Home.tsx`](src/Home.tsx).
+
+## Available Commands
+
+```bash
+pnpm dev       # Start the development server
+pnpm build     # Type-check and create a production build
+pnpm lint      # Run ESLint
+pnpm preview   # Preview the production build locally
+```
+
+When adding or changing an exercise, run `pnpm lint` and `pnpm build` before considering the change complete.
