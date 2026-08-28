@@ -78,6 +78,10 @@ src/
       readme.md
       TaskTwoA.tsx
       solutions/
+    task_3/
+      readme.md
+      TaskThreeA.tsx
+      solutions/
   Home.tsx                  Task and solution links
   routes.tsx                Application routes
 ```

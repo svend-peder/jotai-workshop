@@ -14,6 +14,8 @@ import TaskTwoC from "./tasks/task_2/TaskTwoC";
 import TaskTwoASolution from "./tasks/task_2/solutions/TaskTwoA";
 import TaskTwoBSolution from "./tasks/task_2/solutions/TaskTwoB";
 import TaskTwoCSolution from "./tasks/task_2/solutions/TaskTwoC";
+import TaskThreeA from "./tasks/task_3/TaskThreeA";
+import TaskThreeASolution from "./tasks/task_3/solutions/TaskThreeA";
 
 export const AppRoutes = () => {
   return (
@@ -49,6 +51,11 @@ export const AppRoutes = () => {
         <Route
           path={appPaths.TASK_TWO_C_SOLUTION}
           element={<TaskTwoCSolution />}
+        />
+        <Route path={appPaths.TASK_THREE_A} element={<TaskThreeA />} />
+        <Route
+          path={appPaths.TASK_THREE_A_SOLUTION}
+          element={<TaskThreeASolution />}
         />
       </Route>
     </Routes>

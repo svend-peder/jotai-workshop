@@ -11,6 +11,8 @@ const Paths = {
   TASK_TWO_A_SOLUTION: "solution/two",
   TASK_TWO_B_SOLUTION: "solution/two/b",
   TASK_TWO_C_SOLUTION: "solution/two/c",
+  TASK_THREE_A: "three",
+  TASK_THREE_A_SOLUTION: "solution/three",
 } as const;
 
 export const appPaths = {
@@ -27,4 +29,6 @@ export const appPaths = {
   TASK_TWO_A_SOLUTION: `/${Paths.TASK_TWO_A_SOLUTION}`,
   TASK_TWO_B_SOLUTION: `/${Paths.TASK_TWO_B_SOLUTION}`,
   TASK_TWO_C_SOLUTION: `/${Paths.TASK_TWO_C_SOLUTION}`,
+  TASK_THREE_A: `/${Paths.TASK_THREE_A}`,
+  TASK_THREE_A_SOLUTION: `/${Paths.TASK_THREE_A_SOLUTION}`,
 } as const;
