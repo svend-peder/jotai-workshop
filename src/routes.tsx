@@ -8,6 +8,12 @@ import TaskOneC from "./tasks/task_1/TaskOneC";
 import TaskOneASolution from "./tasks/task_1/solutions/TaskOneA";
 import TaskOneBSolution from "./tasks/task_1/solutions/TaskOneB";
 import TaskOneCSolution from "./tasks/task_1/solutions/TaskOneC";
+import TaskTwoA from "./tasks/task_2/TaskTwoA";
+import TaskTwoB from "./tasks/task_2/TaskTwoB";
+import TaskTwoC from "./tasks/task_2/TaskTwoC";
+import TaskTwoASolution from "./tasks/task_2/solutions/TaskTwoA";
+import TaskTwoBSolution from "./tasks/task_2/solutions/TaskTwoB";
+import TaskTwoCSolution from "./tasks/task_2/solutions/TaskTwoC";
 
 export const AppRoutes = () => {
   return (
@@ -28,6 +34,21 @@ export const AppRoutes = () => {
         <Route
           path={appPaths.TASK_ONE_C_SOLUTION}
           element={<TaskOneCSolution />}
+        />
+        <Route path={appPaths.TASK_TWO_A} element={<TaskTwoA />} />
+        <Route path={appPaths.TASK_TWO_B} element={<TaskTwoB />} />
+        <Route path={appPaths.TASK_TWO_C} element={<TaskTwoC />} />
+        <Route
+          path={appPaths.TASK_TWO_A_SOLUTION}
+          element={<TaskTwoASolution />}
+        />
+        <Route
+          path={appPaths.TASK_TWO_B_SOLUTION}
+          element={<TaskTwoBSolution />}
+        />
+        <Route
+          path={appPaths.TASK_TWO_C_SOLUTION}
+          element={<TaskTwoCSolution />}
         />
       </Route>
     </Routes>

@@ -82,6 +82,66 @@ const Home = () => {
                 </Link>
               </td>
             </tr>
+            <tr className="border-b border-slate-800">
+              <th scope="row" className="px-4 py-3 font-medium">
+                Task 2A
+              </th>
+              <td className="px-4 py-3">
+                <Link
+                  to={appPaths.TASK_TWO_A}
+                  className="underline decoration-cyan-400 underline-offset-4"
+                >
+                  Open task
+                </Link>
+                <span className="mx-2 text-slate-500">/</span>
+                <Link
+                  to={appPaths.TASK_TWO_A_SOLUTION}
+                  className="underline decoration-cyan-400 underline-offset-4"
+                >
+                  View solution
+                </Link>
+              </td>
+            </tr>
+            <tr className="border-b border-slate-800">
+              <th scope="row" className="px-4 py-3 font-medium">
+                Task 2B
+              </th>
+              <td className="px-4 py-3">
+                <Link
+                  to={appPaths.TASK_TWO_B}
+                  className="underline decoration-cyan-400 underline-offset-4"
+                >
+                  Open task
+                </Link>
+                <span className="mx-2 text-slate-500">/</span>
+                <Link
+                  to={appPaths.TASK_TWO_B_SOLUTION}
+                  className="underline decoration-cyan-400 underline-offset-4"
+                >
+                  View solution
+                </Link>
+              </td>
+            </tr>
+            <tr className="border-b border-slate-800">
+              <th scope="row" className="px-4 py-3 font-medium">
+                Task 2C
+              </th>
+              <td className="px-4 py-3">
+                <Link
+                  to={appPaths.TASK_TWO_C}
+                  className="underline decoration-cyan-400 underline-offset-4"
+                >
+                  Open task
+                </Link>
+                <span className="mx-2 text-slate-500">/</span>
+                <Link
+                  to={appPaths.TASK_TWO_C_SOLUTION}
+                  className="underline decoration-cyan-400 underline-offset-4"
+                >
+                  View solution
+                </Link>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>

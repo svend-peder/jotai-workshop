@@ -5,6 +5,12 @@ const Paths = {
   TASK_ONE_A_SOLUTION: "solution/one",
   TASK_ONE_B_SOLUTION: "solution/one/b",
   TASK_ONE_C_SOLUTION: "solution/one/c",
+  TASK_TWO_A: "two",
+  TASK_TWO_B: "two/b",
+  TASK_TWO_C: "two/c",
+  TASK_TWO_A_SOLUTION: "solution/two",
+  TASK_TWO_B_SOLUTION: "solution/two/b",
+  TASK_TWO_C_SOLUTION: "solution/two/c",
 } as const;
 
 export const appPaths = {
@@ -15,4 +21,10 @@ export const appPaths = {
   TASK_ONE_A_SOLUTION: `/${Paths.TASK_ONE_A_SOLUTION}`,
   TASK_ONE_B_SOLUTION: `/${Paths.TASK_ONE_B_SOLUTION}`,
   TASK_ONE_C_SOLUTION: `/${Paths.TASK_ONE_C_SOLUTION}`,
+  TASK_TWO_A: `/${Paths.TASK_TWO_A}`,
+  TASK_TWO_B: `/${Paths.TASK_TWO_B}`,
+  TASK_TWO_C: `/${Paths.TASK_TWO_C}`,
+  TASK_TWO_A_SOLUTION: `/${Paths.TASK_TWO_A_SOLUTION}`,
+  TASK_TWO_B_SOLUTION: `/${Paths.TASK_TWO_B_SOLUTION}`,
+  TASK_TWO_C_SOLUTION: `/${Paths.TASK_TWO_C_SOLUTION}`,
 } as const;

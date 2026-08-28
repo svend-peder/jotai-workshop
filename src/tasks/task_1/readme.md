@@ -1,8 +1,10 @@
-# Task 1
+# Task 1 - Basics of global state and jotai
+
+Jotai is a tool suited for sharing global state between different parts of the app. One common example of something we want to share everywhere is dark mode vs light mode. This is something the user wants to set once and expect the app to know everywhere.
 
 In this task we will setup our first jotai atom and we will see how simple it can be and what problems it can solve.
-We have a set of nested react components. At the top level there is a button to toggle dark mode.
-In the bottom of the component tree there is a button that has different styling for dark mode and light mode.
+In each task is a set of nested react components. At the top level there is a button to toggle dark/light mode.
+In the bottom of the component tree there is a button that has different styling for dark mode/light mode.
 We will look at different ways to pass that state to the button in the bottom of the tree.
 
 ## Task 1A
