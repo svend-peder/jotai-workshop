@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Button from "~/components/Button/Button";
 
-const ExerciseOne = () => {
+const TaskOne = () => {
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-8">Exercise 1</h1>
+      <h1 className="text-2xl font-bold mb-8">Task 1</h1>
       <NestedComponents />
     </div>
   );
@@ -34,4 +34,4 @@ const Counter = () => {
     </div>
   );
 };
-export default ExerciseOne;
+export default TaskOne;

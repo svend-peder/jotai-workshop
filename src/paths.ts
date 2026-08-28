@@ -1,8 +1,8 @@
 const Paths = {
-  EXERCISE_ONE: "one",
+  TASK_ONE: "one",
 } as const;
 
 export const appPaths = {
   root: "/",
-  EXERCISE_ONE: `/${Paths.EXERCISE_ONE}`,
+  TASK_ONE: `/${Paths.TASK_ONE}`,
 } as const;
