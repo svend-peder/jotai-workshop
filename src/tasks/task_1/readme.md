@@ -1,19 +1,18 @@
-# Task 1 - Basics of global state and jotai
+# Task 1 - The Basics of Global State and Jotai
 
-Jotai is a tool suited for sharing global state between different parts of the app. One common example of something we want to share everywhere is dark mode vs light mode. This is something the user wants to set once and expect the app to know everywhere.
+Jotai makes it easy to share state between different parts of an application. A common example is a dark or light color mode: a user sets the mode once and expects the rest of the application to respond to it.
 
-In this task we will setup our first jotai atom and we will see how simple it can be and what problems it can solve.
-In each task is a set of nested react components. At the top level there is a button to toggle dark/light mode.
-In the bottom of the component tree there is a button that has different styling for dark mode/light mode.
-We will look at different ways to pass that state to the button in the bottom of the tree.
+In this task, you will set up your first Jotai atom and see how it can solve a common state-sharing problem.
+Each exercise contains a set of nested React components. The top-level component has a button for switching between dark and light mode, while a button at the bottom of the component tree changes its styling based on the current mode.
+You will implement three different ways to make the mode available to that button.
 
 ## Task 1A
 
-Pass the state through all the components using props. Code in the file `TaskOneA.tsx`.
+Pass the mode through every component using props. Write your solution in `TaskOneA.tsx`.
 
 **Hint:**
 
-Typing the props can be done like this
+You can type the props like this:
 
 ```
 interface Props {
@@ -23,19 +22,19 @@ interface Props {
 
 ## Task 1B
 
-The previous method can be quite tedious and in a large app it can grow to a level where changing adding or removing props is almost impossible.
-That pattern is called prop drilling and is something we would like to avoid.
-Now we will look at how jotai solves this.
+The previous approach can become tedious in a large application. As the component tree grows, adding, removing, or changing props at each level becomes increasingly difficult.
+This pattern is called prop drilling, and it is something we generally want to avoid.
+In this exercise, you will see how Jotai can solve the same problem without passing the mode through every component.
 
-Create an atom. Code in the file `TaskOneB.tsx`.
+Create an atom in `TaskOneB.tsx`:
 
 ```
 const modeAtom = atom<Mode>("light");
 ```
 
-Replace useState hook with useAtom hook.
+Replace the `useState` hook with the `useAtom` hook.
 
-In the bottom component get the state with useAtom hook so that you can get the state without prop drilling.
+In the bottom component, use the same atom to read the mode without prop drilling.
 
 **Hint:**
 
@@ -45,12 +44,11 @@ const [state, setState] = useAtom(myAtom);
 
 ## Task 1C
 
-The great thing about jotai is that the useAtom hook looks very similar to the useState hook we use all the time. The familiar pattern makes it easy to use.
-Furthermore, there is very little setup. We only have to define a atom and thats it.
-Now, lets look at another way to solve this problem. Context have some differences to using a atom, but we will come back to that in later tasks.
-For now we will see that we can avoid prop drilling using react context, but it requires a bit more setup.
+The `useAtom` hook looks very similar to the `useState` hook you already use, which makes Jotai easy to learn. It also requires very little setup: define an atom, then read or update it wherever it is needed.
 
-In task 1C , replace useState with react context. Code in `TaskOneC.tsx`.
+Next, you will solve the same problem with React Context. Context has some important differences from Jotai, which we will explore in later tasks. For now, focus on how Context can eliminate prop drilling, while requiring a little more setup.
+
+In `TaskOneC.tsx`, replace `useState` with React Context.
 
 **Hint:**
 
@@ -67,7 +65,7 @@ const useMyContext = () => {
   const ctx = useContext(context);
 
   if (ctx == null) {
-    throw new Error('useContext hook must be use used within a MyProvider');
+    throw new Error('useContext hook must be used within a MyProvider');
   }
 
   return ctx;
