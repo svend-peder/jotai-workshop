@@ -1,34 +1,30 @@
 # Jotai Workshop
 
-````js
-export default defineConfig([
-  # Jotai Workshop
+This repository contains small React examples that illustrate different ways to work with shared state using [Jotai](https://jotai.org/). The exercises are designed to be read, changed, and compared in the browser rather than used as a standalone application.
 
-  This repository contains small React examples that illustrate different ways to work with shared state using [Jotai](https://jotai.org/). The exercises are designed to be read, changed, and compared in the browser rather than used as a standalone application.
+The examples assume that you already have a working knowledge of:
 
-  The examples assume that you already have a working knowledge of:
+- React components and JSX
+- Props and component composition
+- React hooks, especially `useState`, `useContext`, and `useEffect`
+- Local component state versus shared or global state
+- Basic TypeScript
 
-  - React components and JSX
-  - Props and component composition
-  - React hooks, especially `useState`, `useContext`, and `useEffect`
-  - Local component state versus shared or global state
-  - Basic TypeScript
+The workshop focuses on the Jotai examples themselves. It does not teach React or hooks from the beginning.
 
-  The workshop focuses on the Jotai examples themselves. It does not teach React or hooks from the beginning.
+## Requirements
 
-  ## Requirements
+Install the following before starting:
 
-  Install the following before starting:
+- [Node.js](https://nodejs.org/) 20.19 or newer, or 22.12 or newer
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), which is included with Node.js
 
-  - [Node.js](https://nodejs.org/) 20.19 or newer, or 22.12 or newer
-  - [pnpm](https://pnpm.io/installation)
+Check that they are available in your terminal:
 
-  Check that they are available in your terminal:
-
-  ```bash
-  node --version
-  pnpm --version
-````
+```bash
+node --version
+npm --version
+```
 
 ## Getting Started
 
@@ -37,13 +33,13 @@ Clone the repository, move into the project directory, and install its dependenc
 ```bash
 git clone <repository-url>
 cd jotai-workshop
-pnpm install
+npm install
 ```
 
 Start the development server:
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 Open the local URL printed by Vite, usually [http://localhost:5173](http://localhost:5173).
@@ -91,10 +87,10 @@ The task pages and solution pages are registered in [`src/routes.tsx`](src/route
 ## Available Commands
 
 ```bash
-pnpm dev       # Start the development server
-pnpm build     # Type-check and create a production build
-pnpm lint      # Run ESLint
-pnpm preview   # Preview the production build locally
+npm run dev       # Start the development server
+npm run build     # Type-check and create a production build
+npm run lint      # Run ESLint
+npm run preview   # Preview the production build locally
 ```
 
-When adding or changing an exercise, run `pnpm lint` and `pnpm build` before considering the change complete.
+When adding or changing an exercise, run `npm run lint` and `npm run build` before considering the change complete.
