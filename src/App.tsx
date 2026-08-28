@@ -1,5 +1,10 @@
-const App = () => {
-  return <div className="text-2xl text-red-500">hello world</div>;
-};
+import { BrowserRouter } from "react-router-dom";
+import { AppRoutes } from "./routes";
 
-export default App;
+const RoutedApp = () => (
+  <BrowserRouter>
+    <AppRoutes />
+  </BrowserRouter>
+);
+
+export default RoutedApp;
